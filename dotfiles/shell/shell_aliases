@@ -1,0 +1,52 @@
+#! /bin/bash
+
+# enable color support of ls and also add handy aliases
+if [[ $OS == 'LINUX' ]]; then
+    alias ls='ls -GFh --color=auto'
+    alias ll='ls -GFhl --color=auto'
+    alias la='ls -GFha --color=auto'
+    alias lr='ls -Gfhlrt --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+
+elif [[ $OS == 'OSX' ]]; then
+    alias ls='ls -GFh'
+    alias ll='ls -GFhl'
+    alias la='ls -GFha' 
+    alias lr='ls -Gfhlrt'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# Tmux alias
+#alias tmux='tmux -2'
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+
+# conveience alias for editing configs
+alias ev='vim ~/.vimrc'
+alias et='vim ~/.tmux.conf'
+alias ez='vim ~/.zshrc'
+alias vim='vim -p'
+alias nvim='nvim -p'
+alias vimno='vim -u NONE'
+alias nvimno='nvim -u NONE'
+
+
+alias jvim='vim -p ~/.vimrc ~/.vim/bundle/jvim/plugin/jvim.vim'
+alias jnvim='nvim -p ~/.vimrc ~/.vim/bundle/jvim/plugin/jvim.vim'
+
+#Colorize GCC output
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+#git
+alias gits='git status'
+alias gita='git add'
+
+printf "${RESET}${GREEN}Shell Aliases$RESET|"

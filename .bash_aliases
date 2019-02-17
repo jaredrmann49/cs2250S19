@@ -1,0 +1,1 @@
+/home/jm48488/dotfiles/bash/bash_aliases

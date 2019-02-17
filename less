@@ -1,0 +1,206 @@
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c- *       Revision:  none
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c- *       Compiler:  gcc avg_grade_mc.c -o avg_grade_mc.out
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c- *
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c- *         Author:  Hugo Valle (), hugovalle1@weber.edu
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c- *   Organization:  WSU
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c- *
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c- * =====================================================================================
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c- */
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-#include <stdio.h>
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-#include <stdbool.h>        // true and false variables
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c:#include <stdlib.h>         // rand(), srand()
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-#include <time.h>           // time() 
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-// Constants
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-#define MINCOUNT 2
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-#define MAXCOUNT 5
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-#define MINGRADE 0
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-#define MAXGRADE 100
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-#define MAXSTUDENTS 30
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-// Main Function
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-int main()
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-{
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    // Task 1: Calculate the average of user input values
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    // Task 2: Validate user input for 0 to 100 only
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c:    // Task 3: Generate random data on how many values they need to enter
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c:    // Task 4: If user/random enters a number below MINCOUNT set it MINCOUNT
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    //         and if user enters a value greater than MAXCOUNT, set it to MAXCOUNT
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    // Task 5: Support multiple student entries. Calculate class average.
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    // Task 6: Display student letter grade
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    int hw_count;
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    int grade_count = 0, student_count = 1;
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    float grade, avg;
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    float total = 0, class_avg = 0;
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c:    srand(time(0));    // set random seed
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    for(student_count = 1; student_count <= MAXSTUDENTS; student_count++)
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-    {
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        printf("Processing %d student grades\n", student_count);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        printf("How many hw values you want to enter (between %d and %d? ", 
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-                MINCOUNT, MAXCOUNT);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        //scanf("%d", &hw_count);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c:        hw_count = rand() % 10; 
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        printf("%d\n", hw_count);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        if(hw_count < MINCOUNT)
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        {
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            printf("%d is lower than %d. Setting your entry to %d\n", 
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-                    hw_count, MINCOUNT, MINCOUNT);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            hw_count = MINCOUNT;
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        }
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        if(hw_count >  MAXCOUNT)
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        {
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            printf("%d is greater than %d. Setting your entry to %d\n", 
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-                    hw_count, MAXCOUNT, MAXCOUNT);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            hw_count = MAXCOUNT;
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        }
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        // Loop over student grades
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        while(grade_count < MAXCOUNT)
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-        {
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            printf("\nEnter %d hw grade(%d-%d): ", grade_count + 1, MINGRADE, MAXGRADE);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-//            scanf("%f", &grade);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c:            grade = rand() % 150;  // get a random number 0-150
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            // "Randomly" make it negative 
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c:            grade = grade - (rand() % 100); // subtract a random 0-100 number.
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            printf("%f\n", grade);
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            if(grade < MINGRADE || grade > MAXGRADE)
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            {
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-                printf("Invalid input. Please try again\n");
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-                continue;       // invalid input
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            }
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            total += grade;     // add up grades
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            grade_count++;            // update test condition: sentinel
+/home/jm48488/program_mods/cs2250S19/mod5/avg_grades_mc.c-            if(grade_count == hw_count)
+--
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-/*
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- * =====================================================================================
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *       Filename:  guessNumber.c
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c: *    Description:  Guess the random number
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *        Version:  1.0
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *        Created:  02/07/2019 08:52:57 AM
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *       Revision:  none
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *       Compiler:  gcc guessNumber.c -o guessNumber.out
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *         Author:  Hugo Valle (), hugovalle1@weber.edu
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *   Organization:  WSU
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- *
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- * =====================================================================================
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c- */
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-#include <stdio.h>
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c:#include <stdlib.h>     // rand(), srand()
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-#include <time.h>       // time()
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-// Constants
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-#define MAX 5
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-#define LIMIT 100
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-// Main Function
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-int main()
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-{
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-    int number, guess;
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c:    srand(time(0));              // set the random SEED
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c:    guess = rand() % LIMIT;         // set random number between 0-9
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-    // int i; // before C89 you need to define i outside loop 
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-    for(int i = 0; i < MAX; i++)
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-    {
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-        printf("Please guess a number between 0 and %d\n", LIMIT - 1);
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-        printf("You have %d opportunities left\n", MAX - i);
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-        scanf("%d", &number);
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-        if(number > guess)
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-        {
+/home/jm48488/program_mods/cs2250S19/mod5/guessNumber.c-            printf("Go lower\n");
+--
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- *        Created:  02/12/2019 10:07:36 AM
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- *       Revision:  none
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- *       Compiler:  gcc people.c -o people.out
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- *
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- *         Author:  Hugo Valle (), hugovalle1@weber.edu
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- *   Organization:  WSU
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- *
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- * =====================================================================================
+/home/jm48488/program_mods/cs2250S19/mod6/people.c- */
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-#include <stdio.h>
+/home/jm48488/program_mods/cs2250S19/mod6/people.c:#include <stdlib.h>     // rand(), srand()
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-#include <time.h>       // time()
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-// Constants
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-#define PERSONS 5
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-#define ATTRI   3
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-#define AGE     0
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-#define WEIGHT  1
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-#define HEIGHT  2
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-// Main Function
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-int main()
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-{
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-    //             [row][cols]
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-    double people[PERSONS][ATTRI];              /* 2D array */
+/home/jm48488/program_mods/cs2250S19/mod6/people.c:    srand(time(0));  // set random seed
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-    for(int i = 0; i < PERSONS; i++)            /* loop over Persons 1D */
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-    {
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-        for(int j = 0; j < ATTRI; j++)          /* loop over attributes 2D */
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-        {
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            if(j == AGE)
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            {
+/home/jm48488/program_mods/cs2250S19/mod6/people.c:                people[i][j] = rand() % 50;  // set age 0-50 
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            }
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            else if(j == WEIGHT)
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            {
+/home/jm48488/program_mods/cs2250S19/mod6/people.c:                people[i][j] = rand() % 200;  // set weight 0-200 kg 
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            }
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            else if(j == HEIGHT)
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            {
+/home/jm48488/program_mods/cs2250S19/mod6/people.c:                people[i][j] = rand() % 200;  // set HEIGHT  0-200 cm
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            }
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-        }
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-    }
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-    // Now display the information
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-    for(int row = 0 ; row < PERSONS ; row++ ) 
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-    {
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-        printf("%d person information\n", row + 1);
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-        for (int col= 0; col < ATTRI; col++) 
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-        {
+/home/jm48488/program_mods/cs2250S19/mod6/people.c-            switch(col) 
+--
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c- *       Revision:  none
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c- *       Compiler:  gcc temperature.c -o temperature.out
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c- *
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c- *         Author:  Hugo Valle (), hugovalle1@weber.edu
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c- *   Organization:  WSU
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c- *
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c- * =====================================================================================
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c- */
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-#include <stdio.h>
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-#include <time.h>       // time()
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c:#include <stdlib.h>     // rand(), srand()
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-// Constants
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-#define NUM 4
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-#define MIN 20      // min temp
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-#define MAX 45      // max temp
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-// Main Function
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-int main()
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-{
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    double max_ogden[NUM]; 
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    double min_ogden[NUM]; 
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    double avg = 0, min_temp = 0, max_temp = 0;
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    int min_day = 1, max_day = 1;
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c:    srand(time(0));         // set random seed
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    printf("Simulating the max and min Ogden temp for the next %d days\n", NUM);
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    // TASK: Capture max and min temps from user
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    for(int i = 0; i < NUM; i++)
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    {
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c:        min_ogden[i] = ((rand() % MIN) + (rand() % MAX))/2;
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c:        max_ogden[i] = min_ogden[i] + (rand() % (MAX - MIN));
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    }
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    // TASK: Display information
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    for(int i = 0; i < NUM; i++)
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    {
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-        printf("%2d) max[%6.2lf] min[%6.2lf] temps in Ogden\n", 
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-                i+1,  max_ogden[i], min_ogden[i]);
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    }
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    // TASK: Calculate the average and min and max of the date range
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    // Initialize your min_temp and max_temp
+/home/jm48488/program_mods/cs2250S19/mod6/temperatures.c-    min_temp = min_ogden[0];

@@ -1,0 +1,13 @@
+
+[user]
+name = Jared Manning
+email = jaredmanning@mail.weber.edu
+[core]
+editor = vim
+autocrlf= input
+[help]
+autocorrect = 1
+[color]
+ui = auto
+[push]
+default = matching
