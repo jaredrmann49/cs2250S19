@@ -941,3 +941,431 @@ cd mod6
 ls
 vim tables.out
 vim tables.c
+clear
+vim
+ls
+mkdir program_mods
+ls
+cd program_mods
+ls
+git clone git @github.com:/hugo-valle/cs2250S19
+git clone git:https://github.com/hugo-valle/cs2250S19
+git clone git://github.com/hugo-valle/cs2250S19
+ls
+ls cs2250S19/
+cd mod1
+ls
+cd
+ls
+cd program_mods
+ls
+cd cs2250S19
+ls
+cd mod1
+ls
+cd ..
+ls
+cd mod6
+ls
+vim tables.c
+cd ~
+ls
+grep -C10 ~/program_mods/cs2250S19/*/*
+ls
+grep rand -C10 ~/program_mods/cs2250S19/*/*
+grep rand -C10 ~/program_mods/cs2250S19/*/*>>less
+grep rand -C10 ~/program_mods/cs2250S19/*/*|less
+grep rand  ~/program_mods/cs2250S19/*/*|less
+grep rand -A10  ~/program_mods/cs2250S19/*/*|less
+cd
+ls
+cd ..
+ls
+cd
+pwd
+ls
+cd ..
+ls
+cd
+ls
+ls git
+ls -a git
+ls .git
+git add .
+git commit -m "Initial commit"
+git config --global user.email "jaredmanning@mail.weber.edu"
+cp git/.gitconfig
+ls git
+cp git/gitconfig .gitconfig
+ls
+ls -l git
+ls .gitconfig
+vi .gitconfig
+git commit 
+git config user.email "jaredmanning@mail.weber.edu"
+git commit -m "Initial commit"
+git config user.name "Jared Manning"
+git commit -m "Initial commit"
+git push
+git commit -m "Initial commit"
+git push
+ls .git
+mv .git .git-backup
+mkdir test 
+cd test
+git clone git://jaredrmann49/cs2250S19
+git clone git:github.com//jaredrmann49/cs2250S19
+git clone git://github.com//jaredrmann49/cs2250S19
+ls
+ls -rtla
+git clone git://github.com//jaredrmann49/cs2250S19
+git clone git://github.com/jaredrmann49/cs2250S19
+ls
+ls *
+mv .git ~/.
+is
+ls
+ls -a
+cd cs2250S19/
+ls
+ls -rtla
+cp .git ~/.
+cp -r .git ~/.
+c
+cd
+ls
+git commit -m "Initial commit"
+git config user.email "jaredmanning@mail.weber.edu
+"
+git config user.name "Jared Manning"
+git commit -m "Initial commit"
+git push
+git remote add origin git://github.com/jaredrmann49/cs2250S19.git
+git push origin
+git remote add -f origin git://github.com/jaredrmann49/cs2250S19.git
+git remote rm origin
+git remote add -f origin git://github.com/jaredrmann49/cs2250S19.git
+git push
+git push --set-upstream origin master
+git remote set-url origin https://github.com/jaredrmann49/cs2250S19.git
+git push
+git push --set-upstream origin master
+git commit -m "Initial commit"
+git push
+git add .
+git commit -m "Initial commit"
+git push
+ls
+clear
+ls
+cd program_mods
+ls
+cd cs2250S19/
+ls
+cd mod5
+ls
+vim avg_grades_mc.c
+vim practice.c
+gcc practice.c -o practice.out
+./practice.out
+gcc practice.c -o practice.out
+./practice.out
+clear
+ls
+mkdir mod7
+ls
+cd mod7
+vim hello_func.c
+clear
+ls
+cd mod7
+ls
+gcc hello_func.c -o hello_func.out
+ls
+cd practice
+ls
+gcc assignment5.c -o assignment5.out
+./assignment5.out
+gcc assignment5.c -o assignment5.out
+./assignment5.out
+gcc assignment5.c -o assignment5.out
+./assignment5.out
+gcc assignment5.c -o assignment5.out
+./assignment5.out
+grep max -C10 ~/program_mods/cs2250S19/*/*
+ls
+cd
+ls
+cd program_mods
+ls
+cd cs2250S19
+ls
+cd mod6
+ls
+vim temperatures.c
+cd
+ls
+cd practice
+ls
+gcc assignment5.c -o assignment5.out
+./assignment5.out
+gcc assignment5.c -o assignment5.out
+./assignment5.out
+git commit "initial commit"
+git commit -m "initial commit"
+ls
+cd practice
+ls
+vim assignment5.c
+clear
+ls
+cd exam1
+ls
+gcc jaredManning_exam1_task1.c -o jaredManning_exam1_task1
+./jaredManning_exam1_task1
+gcc jaredManning_exam1_task1.c -o jaredManning_exam1_task1
+./jaredManning_exam1_task1
+gcc jaredManning_exam1_task1.c -o jaredManning_exam1_task1
+./jaredManning_exam1_task1
+gcc jaredManning_exam1_task1.c -o jaredManning_exam1_task1
+./jaredManning_exam1_task1
+gcc jaredManning_exam1_task1.c -o jaredManning_exam1_task1
+./jaredManning_exam1_task1
+ls
+gcc jaredManning_exam1_task2.c -o jaredManning_exam1_task2
+./jaredManning_exam1_task2
+gcc jaredManning_exam1_task2.c -o jaredManning_exam1_task2
+./jaredManning_exam1_task2
+gcc jaredManning_exam1_task2.c -o jaredManning_exam1_task2
+./jaredManning_exam1_task2
+gcc jaredManning_exam1_task2.c -o jaredManning_exam1_task2
+./jaredManning_exam1_task2
+gcc jaredManning_exam1_task2.c -o jaredManning_exam1_task2
+./jaredManning_exam1_task2
+gcc jaredManning_exam1_task2.c -o jaredManning_exam1_task2
+./jaredManning_exam1_task2
+gcc jaredManning_exam1_task2.c -o jaredManning_exam1_task2
+./jaredManning_exam1_task2
+git commit -m "initial commit"
+git add .
+git commit -m "initial commit"
+git commit -m "Initial commit"
+git remote set-url origin https://github.com/jaredrmann49/cs2250S19.git
+git init
+ls
+git add 
+git add .
+git commit -m "initial commit"
+git config --jaredmanning@mail.weber.edu
+git config --jaredrmann49
+git add .
+git commit -m "initial commit"
+git config jaredmanning@mail.weber.edu
+git config jaredrmann49
+git config -- jaredmanning@mail.weber.edu
+git init
+git push
+git remote add -f origin git://github.com/jaredrmann49/cs2250S19.git
+git commit -m "initial commit"
+git add .
+git commit -m "initial commit"
+git config user.email "jaredmanning@mail.weber.edu
+
+git config user.email "jaredmanning@mail.weber.edu"
+
+
+
+clear
+
+clear
+clear
+ls
+mkdir exam1
+ls
+cd exam1
+git init
+vim jaredManning_exam1_task1.c
+vim jaredManning_exam1_task2.c
+ls
+cd exam1
+ls
+git init
+git add .
+ls
+git commit
+git config user.email "jaredmanning@mail.weber.edu"
+git config user.name "Jared Manning"
+git commit -m "initial commit"
+git push
+git push --set-upstream origin master
+https://github.com/jaredrmann49/cs2250S19.git
+clear
+which git
+ls
+git status
+git log 
+ls
+git status
+vim jaredManning_exam1_task1.c 
+git status
+git commit -m "Add comments" jaredManning_exam1_task1.c 
+git status
+git log 
+git log > file
+ls
+cat file 
+rm file 
+git log > jaredmanning_weber_exam1.log
+ls
+cp jaredmanning_weber_exam1.log/home/hvalle/submit/cs2250
+cp jaredmanning_weber_exam1.log /home/hvalle/submit/cs2250
+cp jaredmanning_exam1.c /home/hvalle/submit/cs2250
+ls
+cp jaredManning_exam1_task1.c /home/hvalle/submit/cs2250
+cp jaredManning_exam1_task2.c /home/hvalle/submit/cs2250
+ls
+mkdir mod8
+ls
+cd mod8
+vim by_address.c
+cp /tmp/main_soccer.c .
+ls
+vim main_soccer.c
+cd mod8
+gcc by_address.c -o by_address.out
+./by_address.out
+gcc by_address.c -o by_address.out
+./by_address.out
+ls
+git add main_soccer.c
+git commit -m "Added Get user rating" main_soccer.c
+git push
+ls
+cd mod8
+ls
+vim string_with_spaces.c
+cd .vim/bundle/c-support
+ls
+vim strings_with_spaces.c
+vim soccer.c
+vim calculator.c calculator.h main_calculator.c
+ls
+cd mod8
+ls
+gcc strings_with_spaces.c -o strings_with_spaces.out
+ls
+gcc strings_with_spaces.c -o strings_with_spaces.out
+./strings_with_spaces.out
+gcc strings_with_spaces.c -o strings_with_spaces.out
+./strings_with_spaces.out
+gcc strings_with_spaces.c -o strings_with_spaces.out
+./strings_with_spaces.out
+clear
+ls
+cd practice
+ls
+vim assignment8.c
+cd
+ls
+cd mod8
+ls
+vim strings_with_spaces.out
+vim strings_with_spaces.c
+ls
+clear
+ls
+cd practice
+ls
+gcc assignment8.c -o assignment.out
+./assignment8.out
+./assignment.out
+gcc assignment8.c -o assignment.out
+./assignment.out
+ls
+mkdir mod9
+ls
+cd mod9
+ls
+clear
+vim date_struct.c
+vim date_struct_better
+vim date_struct_better.c
+vim employee.c
+cd mod9
+ls
+cd mod8
+ls
+vim strings_with_spaces.c
+cd practice
+ls
+assignment8.c
+vim assignment8.c
+ls
+cd mod9
+ls
+vim use_employee.c
+cp /tmp/seats.c .
+vim seats.c
+clear
+ls
+cd mod8
+ls
+vim strings_with_spaces.c
+cd
+ls
+cd practice
+ls
+vim assignment8.c
+ls
+cd practice
+ls
+cp lab8.c lab8_1.c
+ls
+vim lab8_1.c
+cp ItemToPurchase.c ItemToPurchase_1.c
+cp ItemToPurchase.h ItemToPurchase_1.h
+clear
+ls
+cd practice
+ls
+vim lab8.c
+clear
+ls
+cd practice
+ls
+git log ls
+ls
+./gcc lab8.c ItemsToPurchase.c -o lab8.ou
+gcc lab8.c ItemsToPurchase.c -o lab8.out
+ls
+gcc lab8.c ItemsToPurchase.c -o lab8.out -lm
+gcc lab8.c -o lab8.out -lm
+git status
+git add
+git add.
+git add lab8.c
+git commit
+git commit -m "Initial commit for task 8"
+git push
+git add ItemToPurchase.h
+git add ItemToPurchase.c
+git commit -m "Initial commit"
+git push
+ls
+cd practice
+ls
+vim ShoppingCart.h
+vim ShoppingCart.h ls
+clear
+ls
+vim ShoppingCart.c
+clear
+;s
+ls
+cd practice
+ls
+vim ItemToPurchase_1.c ItemToPurchase_1.h
+clear
+cd practice
+ls
+vim ItemToPurchase_1.c ItemToPurchase_1.h lab8_1.c

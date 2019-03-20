@@ -27,7 +27,7 @@
 int main()
 {
 ItemToPurchase inventory[2];
-printf("Item 1\n");
+
 printf("Enter the item name:\n");
 scanf("%[^\n]", inventory[0].itemName);
 printf("Enter the item price:\n");
@@ -35,7 +35,6 @@ scanf("%d", &inventory[0].itemPrice);
 printf("Enter the item quantity:\n");
 scanf("%d", &inventory[0].itemQuantity);
 fflush(stdin);
-// while ((getchar()()) != '\n');
 printf("Enter the item name:\n");
 scanf("%[^\n]", inventory[1].itemName);
 printf("Enter the item price:\n");

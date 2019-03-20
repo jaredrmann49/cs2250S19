@@ -21,13 +21,49 @@ $\=strftime("\"%A, %d %B %Y\"")
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1550361032,,"q"
-:q!
-|2,0,1550359778,,"q!"
+|2,0,1553010051,,"q"
 :w
-|2,0,1549991908,,"w"
+|2,0,1553010037,,"w"
+:tabnew ShoppingCart.c
+|2,0,1552777115,,"tabnew ShoppingCart.c"
+:tabnew ShoppingCart.h
+|2,0,1552777034,,"tabnew ShoppingCart.h"
+:q!
+|2,0,1552777003,,"q!"
+:tabnew ShoppingCart.h ShoppingCart.c
+|2,0,1552776963,,"tabnew ShoppingCart.h ShoppingCart.c"
+:wa
+|2,0,1552760981,,"wa"
+:tabnew ItemToPurchase.c
+|2,0,1552756029,,"tabnew ItemToPurchase.c"
+:tabnew ItemToPurchase.h
+|2,0,1552755993,,"tabnew ItemToPurchase.h"
+:qa
+|2,0,1552580189,,"qa"
+:tabnew use_seats.c
+|2,0,1552576857,,"tabnew use_seats.c"
+:tabnew seats.h
+|2,0,1552576152,,"tabnew seats.h"
+:tabnew
+|2,0,1552406991,,"tabnew"
+:newtab
+|2,0,1552406978,,"newtab"
 :wq
-|2,0,1549991221,,"wq"
+|2,0,1552403322,,"wq"
+:,cfu
+|2,0,1552403002,,",cfu"
+:tabnew soccer.c
+|2,0,1551372245,,"tabnew soccer.c"
+:tabnew soccer.h
+|2,0,1551372101,,"tabnew soccer.h"
+:!q
+|2,0,1551369429,,"!q"
+:cfu
+|2,0,1551196209,,"cfu"
+:x
+|2,0,1550768550,,"x"
+:cfu Hello_world
+|2,0,1550591708,,"cfu Hello_world"
 :=G
 |2,0,1549557419,,"=G"
 :%s
@@ -53,7 +89,9 @@ $\=strftime("\"%A, %d %B %Y\"")
 
 # Search String History (newest to oldest):
 ? ^#define\ MODIFIED__ \zs.*
-|2,1,1549991908,,"^#define\\ MODIFIED__ \\zs.*"
+|2,1,1553010037,,"^#define\\ MODIFIED__ \\zs.*"
+? \<item\>
+|2,1,1552757006,,"\\<item\\>"
 ? student_count
 |2,1,1549385366,,"student_count"
 ? count
@@ -66,278 +104,1085 @@ $\=strftime("\"%A, %d %B %Y\"")
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@CalcGross
+|2,3,1552404479,,"CalcGross"
+@CalcNet
+|2,3,1552403785,,"CalcNet"
+@Hello_Date
+|2,3,1552403023,,"Hello_Date"
+@StrSpaceToHyphen
+|2,3,1551370821,,"StrSpaceToHyphen"
 
 # Debug Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	                people[i][AGE] = rand() % 50;   //set age 0-50
-|3,1,0,1,1,0,1549991772,"                people[i][AGE] = rand() % 50;   //set age 0-50"
-"1	CHAR	0
-	       {
+"0	LINE	0
+	ShoppingCart AddItem(ShoppingCart cart, ItemToPurchase item);
 	
-|3,0,1,0,2,0,1549989292,"       {",""
-"2	CHAR	0
-	);
-	    printf("You entered: %s %s \n", serv_oil, serv_change);
+	ShoppingCart RemoveItem(ShoppingCart name, char[] name);
 	
-	    return 0;
+	ShoppingCart ModifyItem(ItemToPurchase item, ShoppingCart cart);
 	
-|3,0,2,0,5,0,1549410223,");","    printf(\"You entered: %s %s \\n\", serv_oil, serv_change);","","    return 0;",""
+	int GetNumItemsInCart(ShoppingCart cart);
+	
+	int GetCostOfCart(ShoppingCart cart);
+	
+	void PrintTotal(ShoppingCart cart);
+	
+	void PrintDescriptions(ShoppingCart cart);
+	
+|3,0,0,1,14,0,1552780763,"ShoppingCart AddItem(ShoppingCart cart, ItemToPurchase item);","","ShoppingCart RemoveItem(ShoppingCart name, char[] name);","","ShoppingCart ModifyItem(ItemToPurchase item, ShoppingCart cart);","","int GetNumItemsInCart(ShoppingCart cart);","","int GetCostOfCart(ShoppingCart cart);","","void PrintTotal(ShoppingCart cart);","","void PrintDescriptions(ShoppingCart cart);",""
+"1	LINE	0
+	
+|3,0,1,1,1,0,1552779742,""
+"2	LINE	0
+	AddItem();
+|3,0,2,1,1,0,1552779669,"AddItem();"
 "3	LINE	0
 	
-|3,0,3,1,1,0,1548349865,""
+|3,0,3,1,1,0,1552779588,""
 "4	LINE	0
-	    printf("Your cartesian coordinates, x = [%.6.2lf]/n", x_pos);
-|3,0,4,1,1,0,1548345784,"    printf(\"Your cartesian coordinates, x = [%.6.2lf]/n\", x_pos);"
+	}ShoppingCart;
+|3,0,4,1,1,0,1552779568,"}ShoppingCart;"
 "5	LINE	0
-	    printf("Your cartesian coordinates, x = [%.2lf], y = [%lf]\n",
-|3,0,5,1,1,0,1548345687,"    printf(\"Your cartesian coordinates, x = [%.2lf], y = [%lf]\\n\","
+	scanf("%[^\n]", inventory[0].itemName);
+|3,0,5,1,1,0,1552758409,"scanf(\"%[^\\n]\", inventory[0].itemName);"
 "6	LINE	0
-	    printf("Your cartesian coordinates, x = [%.2lf], y = [%.2lf]\n",
-|3,0,6,1,1,0,1548345677,"    printf(\"Your cartesian coordinates, x = [%.2lf], y = [%.2lf]\\n\","
-"7	LINE	0
-	    printf("Enter a character: ");
-	    scanf("%c", &cIn);
-	    printf("You entered [%c]\n", cIn);
-|3,0,7,1,3,0,1548175564,"    printf(\"Enter a character: \");","    scanf(\"%c\", &cIn);","    printf(\"You entered [%c]\\n\", cIn);"
+	
+|3,0,6,1,1,0,1552757413,""
+"7	CHAR	0
+	
+	
+|3,0,7,0,2,0,1552601024,"",""
 "8	LINE	0
-	    printf("Enter the first letter of your first name: \n");
-	    scanf("%c", &c);
-	    printf(
-|3,0,8,1,3,0,1548173901,"    printf(\"Enter the first letter of your first name: \\n\");","    scanf(\"%c\", &c);","    printf("
+	typedef struct Seat_struct 
+	{
+	    char firstName[50];
+	    char lastName[50];
+	    int  amountPaid;
+	} Seat;
+	
+|3,0,8,1,7,0,1552576394,"typedef struct Seat_struct ","{","    char firstName[50];","    char lastName[50];","    int  amountPaid;","} Seat;",""
 "9	LINE	0
 	
-|3,0,9,1,1,0,1548173454,""
-"-	CHAR	0
-	%
-|3,0,36,0,1,0,1549990863,"%"
+|3,0,9,1,1,0,1552403760,""
+""-	CHAR	0
+	 
+|3,1,36,0,1,0,1553007584," "
 
 # File marks:
-'0  1  0  ~/.gitconfig
-|4,48,1,0,1550361032,"~/.gitconfig"
-'1  36  27  ~/program_mods/cs2250S19/mod6/tables.c
-|4,49,36,27,1550359778,"~/program_mods/cs2250S19/mod6/tables.c"
-'2  32  8  ~/mod6/tables.c
-|4,50,32,8,1550033909,"~/mod6/tables.c"
-'3  15  17  ~/mod6/tables.out
-|4,51,15,17,1550026377,"~/mod6/tables.out"
-'4  35  4  ~/mod6/people.c
-|4,52,35,4,1549991953,"~/mod6/people.c"
-'5  40  0  ~/mod6/tables.c
-|4,53,40,0,1549991221,"~/mod6/tables.c"
-'6  40  0  ~/mod6/tables.c
-|4,54,40,0,1549991221,"~/mod6/tables.c"
-'7  32  4  ~/mod6/temperatures.c
-|4,55,32,4,1549990175,"~/mod6/temperatures.c"
-'8  35  35  ~/mod5/arrays.c
-|4,56,35,35,1549559671,"~/mod5/arrays.c"
-'9  53  25  ~/mod5/avg_grades_mc.c
-|4,57,53,25,1549558952,"~/mod5/avg_grades_mc.c"
+'0  38  32  ~/practice/lab8.c
+|4,48,38,32,1553010051,"~/practice/lab8.c"
+'1  38  13  ~/mod9/struct_test.c
+|4,49,38,13,1553007778,"~/mod9/struct_test.c"
+'2  38  13  ~/practice/ShoppingCart.h
+|4,50,38,13,1552786568,"~/practice/ShoppingCart.h"
+'3  21  0  ~/practice/ShoppingCart.h
+|4,51,21,0,1552781042,"~/practice/ShoppingCart.h"
+'4  1  0  ~/practice/ls
+|4,52,1,0,1552780634,"~/practice/ls"
+'5  52  0  ~/practice/ShoppingCart.h
+|4,53,52,0,1552780600,"~/practice/ShoppingCart.h"
+'6  52  0  ~/practice/ShoppingCart.h
+|4,54,52,0,1552780600,"~/practice/ShoppingCart.h"
+'7  52  0  ~/practice/ShoppingCart.h
+|4,55,52,0,1552780600,"~/practice/ShoppingCart.h"
+'8  52  0  ~/practice/ShoppingCart.h
+|4,56,52,0,1552780600,"~/practice/ShoppingCart.h"
+'9  27  10  ~/practice/lab8.c
+|4,57,27,10,1552777393,"~/practice/lab8.c"
 
 # Jumplist (newest first):
--'  1  0  ~/.gitconfig
-|4,39,1,0,1550361032,"~/.gitconfig"
--'  36  27  ~/program_mods/cs2250S19/mod6/tables.c
-|4,39,36,27,1550359778,"~/program_mods/cs2250S19/mod6/tables.c"
--'  36  27  ~/program_mods/cs2250S19/mod6/tables.c
-|4,39,36,27,1550359778,"~/program_mods/cs2250S19/mod6/tables.c"
--'  1  0  ~/program_mods/cs2250S19/mod6/tables.c
-|4,39,1,0,1550359718,"~/program_mods/cs2250S19/mod6/tables.c"
--'  1  0  ~/program_mods/cs2250S19/mod6/tables.c
-|4,39,1,0,1550359718,"~/program_mods/cs2250S19/mod6/tables.c"
--'  32  8  ~/mod6/tables.c
-|4,39,32,8,1550033909,"~/mod6/tables.c"
--'  32  8  ~/mod6/tables.c
-|4,39,32,8,1550033909,"~/mod6/tables.c"
--'  32  8  ~/mod6/tables.c
-|4,39,32,8,1550033909,"~/mod6/tables.c"
--'  32  8  ~/mod6/tables.c
-|4,39,32,8,1550033909,"~/mod6/tables.c"
--'  32  8  ~/mod6/tables.c
-|4,39,32,8,1550033909,"~/mod6/tables.c"
--'  32  8  ~/mod6/tables.c
-|4,39,32,8,1550033909,"~/mod6/tables.c"
--'  32  8  ~/mod6/tables.c
-|4,39,32,8,1550033909,"~/mod6/tables.c"
--'  32  8  ~/mod6/tables.c
-|4,39,32,8,1550033909,"~/mod6/tables.c"
--'  40  0  ~/mod6/tables.c
-|4,39,40,0,1550026383,"~/mod6/tables.c"
--'  40  0  ~/mod6/tables.c
-|4,39,40,0,1550026383,"~/mod6/tables.c"
--'  40  0  ~/mod6/tables.c
-|4,39,40,0,1550026383,"~/mod6/tables.c"
--'  40  0  ~/mod6/tables.c
-|4,39,40,0,1550026383,"~/mod6/tables.c"
--'  40  0  ~/mod6/tables.c
-|4,39,40,0,1550026383,"~/mod6/tables.c"
--'  40  0  ~/mod6/tables.c
-|4,39,40,0,1550026383,"~/mod6/tables.c"
--'  40  0  ~/mod6/tables.c
-|4,39,40,0,1550026383,"~/mod6/tables.c"
--'  40  0  ~/mod6/tables.c
-|4,39,40,0,1550026383,"~/mod6/tables.c"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  15  17  ~/mod6/tables.out
-|4,39,15,17,1550026377,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  1  0  ~/mod6/tables.out
-|4,39,1,0,1550026365,"~/mod6/tables.out"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  35  4  ~/mod6/people.c
-|4,39,35,4,1549991953,"~/mod6/people.c"
--'  6  19  ~/mod6/people.c
-|4,39,6,19,1549991274,"~/mod6/people.c"
--'  54  4  ~/mod6/people.c
-|4,39,54,4,1549991274,"~/mod6/people.c"
--'  6  19  ~/mod6/people.c
-|4,39,6,19,1549991274,"~/mod6/people.c"
--'  54  4  ~/mod6/people.c
-|4,39,54,4,1549991274,"~/mod6/people.c"
--'  6  19  ~/mod6/people.c
-|4,39,6,19,1549991274,"~/mod6/people.c"
--'  54  4  ~/mod6/people.c
-|4,39,54,4,1549991274,"~/mod6/people.c"
--'  6  19  ~/mod6/people.c
-|4,39,6,19,1549991274,"~/mod6/people.c"
--'  54  4  ~/mod6/people.c
-|4,39,54,4,1549991274,"~/mod6/people.c"
--'  6  19  ~/mod6/people.c
-|4,39,6,19,1549991274,"~/mod6/people.c"
--'  54  4  ~/mod6/people.c
-|4,39,54,4,1549991274,"~/mod6/people.c"
--'  6  19  ~/mod6/people.c
-|4,39,6,19,1549991274,"~/mod6/people.c"
--'  54  4  ~/mod6/people.c
-|4,39,54,4,1549991274,"~/mod6/people.c"
--'  6  19  ~/mod6/people.c
-|4,39,6,19,1549991274,"~/mod6/people.c"
--'  54  4  ~/mod6/people.c
-|4,39,54,4,1549991274,"~/mod6/people.c"
--'  6  19  ~/mod6/people.c
-|4,39,6,19,1549991274,"~/mod6/people.c"
+-'  38  32  ~/practice/lab8.c
+|4,39,38,32,1553010051,"~/practice/lab8.c"
+-'  27  0  ~/practice/lab8.c
+|4,39,27,0,1553009812,"~/practice/lab8.c"
+-'  38  13  ~/mod9/struct_test.c
+|4,39,38,13,1553007778,"~/mod9/struct_test.c"
+-'  38  13  ~/mod9/struct_test.c
+|4,39,38,13,1553007778,"~/mod9/struct_test.c"
+-'  6  19  ~/mod9/struct_test.c
+|4,39,6,19,1553007177,"~/mod9/struct_test.c"
+-'  42  4  ~/mod9/struct_test.c
+|4,39,42,4,1553007177,"~/mod9/struct_test.c"
+-'  6  19  ~/mod9/struct_test.c
+|4,39,6,19,1553007177,"~/mod9/struct_test.c"
+-'  42  4  ~/mod9/struct_test.c
+|4,39,42,4,1553007177,"~/mod9/struct_test.c"
+-'  38  13  ~/practice/ShoppingCart.h
+|4,39,38,13,1552786568,"~/practice/ShoppingCart.h"
+-'  38  13  ~/practice/ShoppingCart.h
+|4,39,38,13,1552786568,"~/practice/ShoppingCart.h"
+-'  38  13  ~/practice/ShoppingCart.h
+|4,39,38,13,1552786568,"~/practice/ShoppingCart.h"
+-'  38  13  ~/practice/ShoppingCart.h
+|4,39,38,13,1552786568,"~/practice/ShoppingCart.h"
+-'  21  0  ~/practice/ShoppingCart.h
+|4,39,21,0,1552781042,"~/practice/ShoppingCart.h"
+-'  21  0  ~/practice/ShoppingCart.h
+|4,39,21,0,1552781042,"~/practice/ShoppingCart.h"
+-'  21  0  ~/practice/ShoppingCart.h
+|4,39,21,0,1552781042,"~/practice/ShoppingCart.h"
+-'  21  0  ~/practice/ShoppingCart.h
+|4,39,21,0,1552781042,"~/practice/ShoppingCart.h"
+-'  51  0  ~/practice/ShoppingCart.c
+|4,39,51,0,1552780750,"~/practice/ShoppingCart.c"
+-'  51  0  ~/practice/ShoppingCart.c
+|4,39,51,0,1552780750,"~/practice/ShoppingCart.c"
+-'  51  0  ~/practice/ShoppingCart.c
+|4,39,51,0,1552780750,"~/practice/ShoppingCart.c"
+-'  51  0  ~/practice/ShoppingCart.c
+|4,39,51,0,1552780750,"~/practice/ShoppingCart.c"
+-'  6  19  ~/practice/ShoppingCart.c
+|4,39,6,19,1552780688,"~/practice/ShoppingCart.c"
+-'  54  4  ~/practice/ShoppingCart.c
+|4,39,54,4,1552780688,"~/practice/ShoppingCart.c"
+-'  6  19  ~/practice/ShoppingCart.c
+|4,39,6,19,1552780688,"~/practice/ShoppingCart.c"
+-'  54  4  ~/practice/ShoppingCart.c
+|4,39,54,4,1552780688,"~/practice/ShoppingCart.c"
+-'  6  19  ~/practice/ShoppingCart.c
+|4,39,6,19,1552780688,"~/practice/ShoppingCart.c"
+-'  54  4  ~/practice/ShoppingCart.c
+|4,39,54,4,1552780688,"~/practice/ShoppingCart.c"
+-'  6  19  ~/practice/ShoppingCart.c
+|4,39,6,19,1552780688,"~/practice/ShoppingCart.c"
+-'  54  4  ~/practice/ShoppingCart.c
+|4,39,54,4,1552780688,"~/practice/ShoppingCart.c"
+-'  1  0  ~/practice/ls
+|4,39,1,0,1552780634,"~/practice/ls"
+-'  1  0  ~/practice/ls
+|4,39,1,0,1552780634,"~/practice/ls"
+-'  1  0  ~/practice/ls
+|4,39,1,0,1552780634,"~/practice/ls"
+-'  1  0  ~/practice/ls
+|4,39,1,0,1552780634,"~/practice/ls"
+-'  1  0  ~/practice/ls
+|4,39,1,0,1552780634,"~/practice/ls"
+-'  1  0  ~/practice/ls
+|4,39,1,0,1552780634,"~/practice/ls"
+-'  1  0  ~/practice/ls
+|4,39,1,0,1552780634,"~/practice/ls"
+-'  1  0  ~/practice/ls
+|4,39,1,0,1552780634,"~/practice/ls"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  52  0  ~/practice/ShoppingCart.h
+|4,39,52,0,1552780600,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  44  0  ~/practice/ShoppingCart.h
+|4,39,44,0,1552779985,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  38  2  ~/practice/ShoppingCart.h
+|4,39,38,2,1552779673,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  54  0  ~/practice/ShoppingCart.h
+|4,39,54,0,1552779562,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  1  0  ~/practice/ShoppingCart.h
+|4,39,1,0,1552779532,"~/practice/ShoppingCart.h"
+-'  24  0  ~/practice/ShoppingCart.h
+|4,39,24,0,1552778728,"~/practice/ShoppingCart.h"
+-'  24  0  ~/practice/ShoppingCart.h
+|4,39,24,0,1552778728,"~/practice/ShoppingCart.h"
+-'  24  0  ~/practice/ShoppingCart.h
+|4,39,24,0,1552778728,"~/practice/ShoppingCart.h"
+-'  24  0  ~/practice/ShoppingCart.h
+|4,39,24,0,1552778728,"~/practice/ShoppingCart.h"
 
 # History of marks within files (newest to oldest):
+
+> ~/practice/lab8.c
+	*	1553010050	0
+	"	38	32
+	^	38	33
+	.	38	32
+	+	58	0
+	+	6	34
+	+	11	41
+	+	20	26
+	+	30	0
+	+	32	2
+	+	31	32
+	+	32	38
+	+	33	27
+	+	32	0
+	+	37	0
+	+	34	33
+	+	35	30
+	+	36	36
+	+	39	0
+	+	40	26
+	+	42	22
+	+	44	39
+	+	46	0
+	+	37	13
+	+	52	0
+	+	46	28
+	+	47	24
+	+	51	26
+	+	34	9
+	+	19	18
+	+	19	45
+	+	20	26
+	+	20	27
+	+	21	0
+	+	34	24
+	+	29	15
+	+	34	12
+	+	36	12
+	+	42	12
+	+	44	12
+	+	11	47
+	+	38	32
+
+> ~/mod9/struct_test.c
+	*	1553007777	0
+	"	38	13
+	^	35	11
+	.	35	10
+	+	42	0
+	+	6	51
+	+	19	23
+	+	20	19
+	+	24	0
+	+	22	3
+	+	24	1
+	+	23	17
+	+	23	51
+	+	35	13
+	+	29	30
+	+	33	0
+	+	35	20
+	+	37	0
+	+	36	71
+	+	11	55
+	+	36	61
+	+	32	23
+	+	35	10
+
+> ~/practice/ls
+	*	1552780632	0
+	"	1	0
+	^	1	5
+	.	1	0
+	+	1	0
+
+> ~/practice/ShoppingCart.h
+	*	1552778761	0
+	"	38	13
+	.	38	12
+	+	41	0
+	+	6	0
+	+	19	26
+	+	18	22
+	+	27	0
+	+	30	12
+	+	27	8
+	+	34	0
+	+	31	0
+	+	34	0
+	+	31	27
+	+	21	28
+	+	31	40
+	+	34	8
+	+	21	0
+	+	22	33
+	+	25	0
+	+	23	4
+	+	25	0
+	+	39	1
+	+	22	15
+	+	34	9
+	+	21	0
+	+	25	0
+	+	20	0
+	+	31	26
+	+	35	0
+	+	34	58
+	+	38	0
+	+	36	55
+	+	32	13
+	+	40	0
+	+	38	12
+
+> ~/practice/ItemToPurchase_1.h
+	*	1552778525	0
+	"	36	0
+	^	21	0
+	.	34	0
+	+	23	22
+	+	22	5
+	+	22	1
+	+	23	24
+	+	34	0
+
+> ~/practice/ShoppingCart.c
+	*	1552777115	0
+	"	27	0
+	^	32	5
+	.	6	0
+	+	32	0
+	+	6	0
+
+> ~/practice/ShoppingCart.h ShoppingCart.c
+	*	1552776999	0
+	"	6	19
+	^	6	20
+	.	6	0
+	+	32	0
+	+	6	0
+
+> ~/practice/ItemToPurchase_1.c
+	*	1552776937	0
+	"	42	28
+	^	42	29
+	.	21	28
+	+	39	0
+	+	40	46
+	+	43	0
+	+	42	59
+	+	45	0
+	+	44	0
+	+	42	43
+	+	21	28
+
+> ~/practice/lab8_1.c
+	*	1552776918	0
+	"	45	1
+
+> ~/practice/ItemToPurchase.c
+	*	1552761630	0
+	"	1	2
+	^	32	8
+	.	29	5
+	+	47	0
+	+	6	0
+	+	25	20
+	+	30	0
+	+	29	35
+	+	25	47
+	+	28	0
+	+	25	4
+	+	28	0
+	+	25	32
+	+	21	26
+	+	28	22
+	+	27	30
+	+	28	19
+	+	29	17
+	+	29	23
+	+	30	0
+	+	32	19
+	+	38	0
+	+	37	0
+	+	35	63
+	+	36	23
+	+	34	46
+	+	36	30
+	+	30	1
+	+	32	33
+	+	27	20
+	+	28	14
+	+	27	7
+	+	28	0
+	+	19	19
+	+	20	18
+	+	21	26
+	+	27	13
+	+	28	5
+	+	29	5
+
+> ~/practice/ItemToPurchase.h
+	*	1552761561	0
+	"	2	15
+	^	23	16
+	.	30	39
+	+	34	0
+	+	6	20
+	+	19	28
+	+	21	36
+	+	26	0
+	+	25	21
+	+	24	0
+	+	23	0
+	+	25	17
+	+	23	14
+	+	26	16
+	+	23	14
+	+	23	15
+	+	27	0
+	+	18	23
+	+	24	0
+	+	27	4
+	+	28	0
+	+	28	41
+	+	29	0
+	+	30	39
+
+> ~/practice/assignment8.c
+	*	1552604043	0
+	"	22	0
+	^	22	0
+	.	22	0
+	+	46	0
+	+	6	48
+	+	11	55
+	+	19	18
+	+	41	0
+	+	38	16
+	+	39	11
+	+	21	12
+	+	24	41
+	+	27	0
+	+	26	0
+	+	28	0
+	+	34	0
+	+	32	4
+	+	31	19
+	+	33	0
+	+	34	15
+	+	27	34
+	+	34	3
+	+	24	37
+	+	44	7
+	+	44	61
+	+	22	0
+
+> ~/mod8/strings_with_spaces.c
+	*	1552598948	0
+	"	25	0
+	^	25	0
+	.	25	0
+	+	60	0
+	+	6	0
+	+	11	71
+	+	6	38
+	+	20	18
+	+	23	25
+	+	34	0
+	+	33	19
+	+	37	44
+	+	31	39
+	+	34	23
+	+	37	45
+	+	42	4
+	+	41	52
+	+	47	0
+	+	29	9
+	+	41	52
+	+	29	0
+	+	35	66
+	+	36	42
+	+	25	38
+	+	51	0
+	+	55	49
+	+	57	44
+	+	79	0
+	+	76	0
+	+	75	10
+	+	72	4
+	+	67	8
+	+	66	29
+	+	56	10
+	+	54	11
+	+	21	18
+	+	20	33
+	+	21	46
+	+	71	8
+	+	70	45
+	+	68	14
+	+	44	4
+	+	27	30
+	+	25	0
+
+> ~/mod9/use_seats.c
+	*	1552580188	0
+	"	6	37
+	^	6	38
+	.	6	37
+	+	32	0
+	+	6	40
+	+	11	55
+	+	6	37
+
+> ~/mod9/seats.h
+	*	1552576847	0
+	"	20	0
+	^	30	5
+	.	20	0
+	+	30	0
+	+	6	20
+	+	21	0
+	+	20	0
+
+> ~/mod9/seats.c
+	*	1552576394	0
+	"	10	0
+	.	10	0
+	+	10	0
+
+> ~/mod9/use_employee.c
+	*	1552575793	0
+	"	28	12
+	^	28	13
+	.	6	0
+	+	32	0
+	+	6	0
+
+> ~/mod9/employee.c
+	*	1552407037	0
+	"	82	33
+	^	82	37
+	.	82	36
+	+	65	0
+	+	6	66
+	+	11	53
+	+	12	33
+	+	19	19
+	+	20	0
+	+	30	10
+	+	36	40
+	+	40	0
+	+	41	30
+	+	44	0
+	+	36	26
+	+	65	0
+	+	60	66
+	+	62	28
+	+	68	0
+	+	67	34
+	+	46	62
+	+	45	27
+	+	49	0
+	+	37	25
+	+	69	0
+	+	70	0
+	+	75	68
+	+	77	30
+	+	80	53
+	+	84	0
+	+	83	24
+	+	29	19
+	+	32	28
+	+	33	0
+	+	34	0
+	+	33	20
+	+	34	27
+	+	33	27
+	+	49	28
+	+	48	18
+	+	52	55
+	+	50	31
+	+	82	34
+	+	83	56
+	+	82	36
+
+> ~/mod9/date_struct_better.c
+	*	1552403320	0
+	"	38	18
+	^	38	19
+	.	38	19
+	+	50	0
+	+	6	0
+	+	20	20
+	+	28	0
+	+	26	12
+	+	23	0
+	+	30	0
+	+	32	30
+	+	39	0
+	+	38	38
+	+	30	22
+	+	29	52
+	+	40	0
+	+	42	0
+	+	46	41
+	+	40	0
+	+	55	0
+	+	54	10
+	+	47	40
+	+	38	19
+
+> ~/mod9/date_struct_better
+	*	1552402451	0
+	"	1	0
+	^	1	5
+	.	1	0
+	+	1	0
+
+> ~/mod9/date_struct.c
+	*	1552402427	0
+	"	27	0
+	^	27	0
+	.	6	0
+	+	32	0
+	+	6	0
+
+> ~/mod8/strings_with_spaces.out
+	*	1552361420	0
+	"	1	0
+
+> ~/mod8/calculator.h
+	*	1551373863	0
+	"	24	35
+	^	24	36
+	.	24	35
+	+	26	0
+	+	6	37
+	+	22	11
+	+	21	0
+	+	24	35
+
+> ~/mod8/calculator.c
+	*	1551373851	0
+	"	22	12
+	^	34	5
+	.	21	22
+	+	34	0
+	+	6	66
+	+	13	0
+	+	12	10
+	+	21	22
+
+> ~/mod8/main_calculator.c
+	*	1551373849	0
+	"	13	1
+	^	12	2
+	.	11	80
+	+	32	0
+	+	6	45
+	+	11	80
+
+> ~/mod8/soccer.c
+	*	1551372924	0
+	"	6	19
+	^	24	19
+	.	24	18
+	+	38	0
+	+	6	60
+	+	16	2
+	+	15	10
+	+	8	32
+	+	14	20
+	+	10	54
+	+	24	18
+
+> ~/mod8/soccer.h
+	*	1551372909	0
+	"	21	0
+	^	21	0
+	.	21	0
+	+	24	0
+	+	6	40
+	+	19	22
+	+	20	0
+	+	20	3
+	+	22	11
+	+	21	0
+
+> ~/mod8/string_with_spaces.c
+	*	1551369435	0
+	"	6	19
+	^	6	20
+	.	6	0
+	+	32	0
+	+	6	0
+
+> ~/mod8/main_soccer.c
+	*	1551200784	0
+	"	124	1
+
+> ~/mod8/by_address.c
+	*	1551199921	0
+	"	29	0
+	^	47	0
+	.	47	0
+	+	48	0
+	+	6	64
+	+	11	53
+	+	28	0
+	+	42	0
+	+	36	4
+	+	35	16
+	+	31	14
+	+	19	18
+	+	31	10
+	+	39	63
+	+	37	20
+	+	38	20
+	+	24	0
+	+	23	41
+	+	46	0
+	+	23	40
+	+	46	0
+	+	24	39
+	+	47	0
+
+> ~/exam1/jaredManning_exam1_task1.c
+	*	1550768550	0
+	"	48	0
+	^	48	0
+	.	48	0
+	+	62	0
+	+	6	58
+	+	13	0
+	+	57	0
+	+	31	58
+	+	29	0
+	+	30	0
+	+	29	12
+	+	32	21
+	+	46	0
+	+	37	0
+	+	36	59
+	+	38	34
+	+	38	0
+	+	42	0
+	+	39	0
+	+	38	44
+	+	41	0
+	+	40	41
+	+	36	41
+	+	45	0
+	+	44	63
+	+	51	0
+	+	50	11
+	+	49	71
+	+	48	0
+
+> ~/exam1/jaredManning_exam1_task2.c
+	*	1550767209	0
+	"	71	56
+	^	71	57
+	.	71	56
+	+	83	0
+	+	6	32
+	+	12	13
+	+	60	0
+	+	29	17
+	+	31	1
+	+	35	6
+	+	30	7
+	+	35	27
+	+	36	27
+	+	35	7
+	+	34	48
+	+	29	1
+	+	35	12
+	+	34	48
+	+	36	11
+	+	38	26
+	+	45	0
+	+	54	0
+	+	77	0
+	+	63	0
+	+	45	21
+	+	54	21
+	+	63	21
+	+	39	0
+	+	51	0
+	+	60	0
+	+	69	0
+	+	39	15
+	+	29	0
+	+	39	8
+	+	46	0
+	+	55	0
+	+	64	0
+	+	46	21
+	+	55	21
+	+	64	21
+	+	40	0
+	+	51	0
+	+	60	0
+	+	69	0
+	+	31	12
+	+	43	0
+	+	42	19
+	+	40	12
+	+	47	0
+	+	56	0
+	+	65	0
+	+	47	11
+	+	56	11
+	+	65	11
+	+	69	11
+	+	63	23
+	+	69	12
+	+	69	27
+	+	31	13
+	+	32	15
+	+	76	0
+	+	73	0
+	+	69	0
+	+	72	23
+	+	71	56
+
+> ~/practice/assignment5.c
+	*	1550716113	0
+	"	85	0
+	^	79	36
+	.	79	35
+	+	85	0
+	+	6	34
+	+	11	55
+	+	75	0
+	+	73	0
+	+	33	26
+	+	38	0
+	+	45	0
+	+	53	0
+	+	61	0
+	+	33	27
+	+	40	0
+	+	46	0
+	+	54	0
+	+	69	0
+	+	34	22
+	+	39	0
+	+	46	0
+	+	54	0
+	+	62	0
+	+	34	24
+	+	45	0
+	+	51	0
+	+	59	0
+	+	39	20
+	+	46	20
+	+	54	20
+	+	62	24
+	+	69	63
+	+	69	90
+	+	69	8
+	+	71	0
+	+	69	73
+	+	71	0
+	+	69	76
+	+	70	0
+	+	73	0
+	+	38	21
+	+	45	21
+	+	53	21
+	+	61	21
+	+	28	12
+	+	72	65
+	+	74	19
+	+	69	30
+	+	74	26
+	+	29	14
+	+	76	19
+	+	78	40
+	+	30	10
+	+	79	13
+	+	79	0
+	+	79	2
+	+	31	5
+	+	79	0
+	+	79	23
+	+	79	0
+	+	79	3
+	+	79	0
+	+	31	0
+	+	34	24
+	+	44	0
+	+	51	0
+	+	59	0
+	+	67	0
+	+	34	30
+	+	31	7
+	+	36	0
+	+	36	19
+	+	34	24
+	+	35	17
+	+	36	0
+	+	35	15
+	+	43	0
+	+	42	19
+	+	40	19
+	+	47	0
+	+	55	0
+	+	63	0
+	+	47	17
+	+	49	17
+	+	55	17
+	+	57	17
+	+	63	17
+	+	65	17
+	+	79	35
+
+> ~/program_mods/cs2250S19/mod6/temperatures.c
+	*	1550715467	0
+	"	64	9
+
+> ~/mod7/hello_func.c
+	*	1550596405	0
+	"	28	32
+	^	19	0
+	.	77	0
+	+	75	0
+	+	6	37
+	+	11	53
+	+	23	18
+	+	46	18
+	+	50	0
+	+	45	0
+	+	44	0
+	+	48	27
+	+	28	31
+	+	40	0
+	+	28	32
+	+	24	27
+	+	25	23
+	+	30	0
+	+	26	3
+	+	30	15
+	+	36	20
+	+	76	0
+	+	39	24
+	+	74	0
+	+	73	16
+	+	76	0
+	+	52	16
+	+	54	33
+	+	65	0
+	+	63	3
+	+	64	17
+	+	65	1
+	+	56	1
+	+	77	0
+	b	24	11
+
+> ~/practice.c
+	*	1550379778	0
+	"	35	0
+	^	35	1
+	.	32	7
+	+	38	0
+	+	6	0
+	+	30	41
+	+	19	18
+	+	27	19
+	+	30	0
+	+	27	32
+	+	34	0
+	+	27	19
+	+	28	0
+	+	32	22
+	+	30	42
+	+	33	23
+	+	6	32
+	+	11	49
+	+	33	11
+	+	32	7
+
+> ~/program_mods/cs2250S19/mod5/avg_grades_mc.c
+	*	1550377139	0
+	"	101	0
 
 > ~/.gitconfig
 	*	1550361031	0
