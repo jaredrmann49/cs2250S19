@@ -23,9 +23,6 @@
 #include <stdio.h>
 typedef struct ShoppingCart_struct
 {
-    
-
-
 const int CART_MAX_SIZE = 10;
 char customerName[50];
 char currentDate[50];
@@ -37,7 +34,7 @@ ItemToPurchase cartItems[10];
 
 ShoppingCart AddItem(ShoppingCart cart, ItemToPurchase item);
 
-ShoppingCart RemoveItem(ShoppingCart name, char[] name);
+//ShoppingCart RemoveItem(ShoppingCart name, char[] name);
 
 ShoppingCart ModifyItem(ItemToPurchase item, ShoppingCart cart);
 
@@ -46,6 +43,8 @@ int GetNumItemsInCart(ShoppingCart cart);
 int GetCostOfCart(ShoppingCart cart);
 
 void PrintTotal(ShoppingCart cart);
+
+void PrintDescriptions(ShoppingCart);
 
 void PrintDescriptions(ShoppingCart cart);
 

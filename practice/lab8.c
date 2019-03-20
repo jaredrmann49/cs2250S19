@@ -27,21 +27,30 @@
 int main()
 {
 ItemToPurchase inventory[2];
+
 printf("Item 1\n");
 printf("Enter the item name:\n");
+//char user_input[30];
+//char user_input2[30];
+
 scanf("%[^\n]", inventory[0].itemName);
+
 printf("Enter the item price:\n");
 scanf("%d", &inventory[0].itemPrice);
 printf("Enter the item quantity:\n");
 scanf("%d", &inventory[0].itemQuantity);
+printf("\nItem 2\n");
+
 fflush(stdin);
-// while ((getchar()()) != '\n');
+while(((getchar)()) != '\n');
+
 printf("Enter the item name:\n");
 scanf("%[^\n]", inventory[1].itemName);
 printf("Enter the item price:\n");
 scanf("%d", &inventory[1].itemPrice);
 printf("Enter the item quantity:\n");
 scanf("%d", &inventory[1].itemQuantity);
+printf("\nTOTAL COST\n");
 
 PrintItemCost(inventory[0]);
 PrintItemCost(inventory[1]);

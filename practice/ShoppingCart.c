@@ -17,6 +17,7 @@
  */
 #include <stdio.h>
 #include "ShoppingCart.h"
+#include <string.h>
 // Constants
 
 // Function Prototypes
@@ -47,8 +48,25 @@ void PrintTotal(ShoppingCart cart)
 
 void PrintDescriptions(ShoppingCart cart)
 {
+    printf("OUTPUT ITEMS' DESCRIPTIONS\n");
+    printf("%s's Shopping Cart - %s\n", customerName, currentDate);
+    
+    scanf("%[^\n]", &customerName[50]);
 }
 
+void PrintMenu(ShoppingCart cart)
+{
+    printf("MENU\n");
+    printf("a - Add item to cart\n");
+    printf("r - Remove item from cart\n");
+    printf("c - Change item quantity\n");
+    printf("i - Output items' descriptions\n");
+    printf("o - Output shopping cart\n");
+    printf("q - Quit\n");
+    printf("\n");
+    printf("Choose an option:\n");
+return;
+}
 // Main Function
 
 
