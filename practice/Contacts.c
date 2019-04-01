@@ -17,7 +17,7 @@
  */
 #include <stdio.h>
 #include "Contacts.h"
-
+#include <string.h>
 // Constants
 
 // Function Prototypes
@@ -60,9 +60,15 @@ void EnterInformation(ContactNode* node, int number)
     printf("Person %d\n", number);
     printf("Enter name:\n");
     scanf("%[^\n]", temp);
+
+    fflush(stdin);
+    while(((getchar)()) != '\n');
+
     printf("Enter phone number:\n");
     scanf("%[^\n]", temp2);
     printf("You entered: %s, %s\n\n",temp, temp2);
+    fflush(stdin);
+    while(((getchar)()) != '\n');
 
     CreateContactNode(node, temp, temp2);
 }

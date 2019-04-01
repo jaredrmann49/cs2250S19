@@ -24,6 +24,7 @@
 PlaylistNode* head;
 PlaylistNode* tail;
 PlaylistNode* item;
+char PlaylistName[50];
 
 // Function Prototypes
 char PrintMenu(char title[]);
@@ -111,6 +112,8 @@ return func;
 
 void OutputFullPlaylist()
 {
+  int count = 1;
+  printf("%s - OUTPUT FULL PLAYLIST\n", PlaylistName);
   PlaylistNode* curr = head;
   if(curr == NULL)
   {
@@ -120,6 +123,8 @@ void OutputFullPlaylist()
   {
     while(curr != NULL)
     {
+        printf("%d.\n", count);
+        count++;
       PrintPlaylistNode(curr);
       curr = GetNextPlaylistNode(curr);
     }
@@ -172,17 +177,48 @@ void RemoveSong()
     printf("REMOVE SONG\n");
     printf("Enter song's unique ID:\n");
     scanf("%[^\n]", ID);
+    ResetBuffer();
     PlaylistNode* node = head;
-    while(node !=NULL)
+    PlaylistNode* last = NULL;
+    if(head == NULL)
+    {
+        printf("error, can't remove from an empty list");
+        return;
+    }
+    while(node != NULL)
     {
        if(strcmp(node->uniqueID, ID)== 0)
         {
+            printf("""%s"" removed\n", node->songName);
+            if(last == NULL)
+            {
+                head = node->nextNodePtr;
+                return;
+            }
+            else if(node->nextNodePtr == NULL)
+            {
+                if(last == NULL)
+                {
+                head = NULL;
+                }
+                else
+                {
+                 last->nextNodePtr = node;
+                }
+                return;
+            }
+            else
+            {
+                 last->nextNodePtr = node->nextNodePtr;
+                 return;
+            }
             
         }
-
-    }
-
-    printf("\n");
+       last = node;
+       node = node->nextNodePtr;
+    }// end of while loop
+    
+    printf("Couldn't complete requested action\n");
 
 }
 
