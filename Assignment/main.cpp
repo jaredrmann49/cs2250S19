@@ -21,77 +21,112 @@
 #include <iostream>
 #include <iomanip>
 #include "ItemToPurchase.h"
+#include "ShoppingCart.h"
 using namespace std;
 
 // Constants
 
 // Function Prototypes
-
+char PrintMenu(ShoppingCart& theCart);
 // Main Function
 int main()
 {
-    int i;
-    const int NUM_ITEMS = 2;
-    string name;
-    int price;
-    int quantity;
-    int total = 0;
-    ItemToPurchase item1;
-    ItemToPurchase item2;
+    string custName;
+    string today;
+    char menuChoice;
 
-    for (i = 0; i < NUM_ITEMS; ++i)
-    {
-        cout << "Item " << i + 1 << endl;
-        cout << "Enter the item name:" << endl;
-        cin.ignore(1000, '\n');
-        getline(cin, name);
+    cout << "Enter customer's name:" << endl;
+    getline(cin, custName);
 
-
-        cout << "Enter the item price;" << endl;
-        cin >> price;
-
-        cout << "Enter the item quantity:" << endl;
-        cin >> quantity;
-        cout << endl;
-
-
-        // Set the Object values for 1
-        if(i == 0)
-        {
-              item1 =  ItemToPurchase();
-              item1.SetName(name);
-              item1.SetPrice(price);
-              item1.SetQuantity(quantity);
-              total += (price * quantity);
-        }
-        // Set the Object values for 2
-        else
-        {
-            item2 = ItemToPurchase();
-              item2.SetName(name);
-              item2.SetPrice(price);
-              item2.SetQuantity(quantity);
-              total += (price * quantity);
-        }
-
-
-        cin.ignore();
-    }
-    
-
-    // Calculate the total
-    
-
-    // Print Total
-    cout << "TOTAL COST" << endl;
-    item1.Print();
-    item2.Print();
+    cout << "Enter today's date:" << endl;
+    getline(cin, today);
     cout << endl;
-    cout << "Total: $" << total << endl;
 
+    cout << "Customer name: " << custName << endl;
+    cout << "Today's date: " << today << endl << endl;
 
+    ShoppingCart myCart(custName, today);
+
+    menuChoice = ' ';
+
+    while(menuChoice != 'q')
+    {
+        menuChoice = PrintMenu(myCart);
+    }
     return 0;
 }
-// Function Definitions
+// Function Defenitions
+char PrintMenu(ShoppingCart& theCart)
+{
+    char menuOp;
+    string name;
+    string desc;
+    int price;
+    int quantity;
 
+    cout << "MENU" << endl;
+    cout << "a - Add item to cart" << endl;
+    cout << "d - Remove item from cart" << endl;
+    cout << "c - Change item quantity" << endl;
+    cout << "i - Output items' descriptions" << endl;
+    cout << "o - Output shopping cart" << endl;
+    cout << "q - Quit" << endl << endl;
+
+    menuOp = ' ';
+
+    while (menuOp != 'a' && menuOp != 'd' && menuOp != 'c' &&
+            menuOp != 'i' && menuOp!= 'o' && menuOp!= 'q')
+    {
+        cout << "Choose an option:" << endl;
+        cin >> menuOp;
+    }
+
+    // switch statement on menuOp
+    switch(menuOp)
+    {
+        case 'a':
+            {
+                cin.ignore();
+
+                cout << "ADD ITEM TO CART" << endl;
+            }
+            break;
+        case 'd':
+            
+                cin.ignore();
+
+                cout << "REMOVE ITEM FROM CART" << endl;
+            
+            break;
+    
+        case 'c':
+            {
+                cin.ignore();
+
+                cout << "CHANGE ITEM QUANTITY" << endl;
+            }
+            break;
+        case 'i':
+            
+               cout << "OUTPUT ITEMS' DESCRIPTION" << endl;
+               theCart.PrintDescription();
+
+               menuOp = ' ';
+               cout << endl;
+               break;
+        case 'o':
+            
+                cout << "OUTPUT SHOPPING CART" << endl;
+                theCart.PrintTotal();
+
+                menuOp = ' ';
+                cout << endl;
+                break;
+            
+            }
+            return menuOp;
+
+
+
+}
 

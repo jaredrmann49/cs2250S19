@@ -34,8 +34,24 @@ ItemToPurchase::ItemToPurchase()
     itemName = "none";
     itemPrice = 0;
     itemQuantity = 0;
+    itemDescription = "none";
 }
 
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  ItemToPurchase
+ *  Description:  Constructor for Item to purchase.
+ *  Set itemName = "none"
+ *  itemPrice = 0, and itemQuantity = 0
+ * =====================================================================================
+ */
+ItemToPurchase::ItemToPurchase(string name, string desc, int price, int quantity)
+{
+    itemName = name;
+    itemPrice = price;
+    itemQuantity = quantity;
+    itemDescription = desc;
+}
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  SetName
@@ -45,6 +61,17 @@ ItemToPurchase::ItemToPurchase()
 void ItemToPurchase::SetName(string name)
 {
     itemName = name;
+}
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  SetDescription
+ *  Description:  Set item description
+ * =====================================================================================
+ */
+void ItemToPurchase::SetDescription(string desc)
+{
+   itemDescription = desc;
 }
 
 /* 
@@ -82,6 +109,16 @@ string ItemToPurchase::GetName() const
 
 /* 
  * ===  FUNCTION  ======================================================================
+ *         Name:  GetDescription
+ *  Description:  Get the item description
+ * =====================================================================================
+ */
+string ItemToPurchase::GetDescription() const
+{
+    return itemDescription;
+}
+/* 
+ * ===  FUNCTION  ======================================================================
  *         Name:  GetPrice
  *  Description:  Get the Purchase price
  * =====================================================================================
@@ -104,13 +141,24 @@ int ItemToPurchase::GetQuantity() const
 
 /* 
  * ===  FUNCTION  ======================================================================
- *         Name:  Print
+ *         Name:  PrintItemCost
  *  Description:  Print Item Purchased
  * =====================================================================================
  */
 
-void ItemToPurchase::Print()
+void ItemToPurchase::PrintItemCost()
 {
     cout << itemName << " " << itemQuantity << " @ $"
         << itemPrice << " = $" << itemPrice * itemQuantity << endl;
+}
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  PrintItemDescription
+ *  Description:  Print Item Description
+ * =====================================================================================
+ */
+
+void ItemToPurchase::PrintItemDescription()
+{
+    cout << itemName << ": " << itemDescription << endl;
 }
