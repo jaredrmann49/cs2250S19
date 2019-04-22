@@ -223,6 +223,8 @@ void ChangeSongPosition(PlaylistNode*& headNode, PlaylistNode*& tailNode, Playli
 {
     PlaylistNode* songNode = 0;
     PlaylistNode* insertPosNode = 0;
+    PlaylistNode* songNodeToMove = 0;
+    PlaylistNode* songNodePrev = 0;
     int songPosition = 0;
     int newPosition = 0;
     int numNodes = 0;
@@ -235,12 +237,23 @@ void ChangeSongPosition(PlaylistNode*& headNode, PlaylistNode*& tailNode, Playli
 
     // Count number of nodes in list
     songNode = headNode;
-
+    prevNode = 0;
     // songNode is the song to be moved
     // ...
-    while ((songNode != 0) && (numNodes < (songPosition - 1)))
-    {
+    while (songNode != 0)
+    {   
         ++numNodes;
+
+        if(numNodes == songPosition)
+        {
+            songNodeToMove = songNode;
+            songNodePrev = prevNode;
+        }
+        if(numNodes == newPosition)
+        {
+            insertPosNode = songNode;
+        }
+        
         songNode = songNode-> GetNext();
     }
 
@@ -248,13 +261,25 @@ void ChangeSongPosition(PlaylistNode*& headNode, PlaylistNode*& tailNode, Playli
     {
         // IF songPosition provided by user is invalid
         // ERROR: Do nothing
+        return;
     }
-    else
-    {
-
-
+        PlaylistNode* saveHead = headNode->GetNext();
+        PlaylistNode* temp = insertPosNode->GetNext();
+        insertPosNode->SetNext(songNodeToMove);
+        songNodeToMove->SetNext(temp);
         // ELSE:
         // STEP 1: Remove song at songPosition from list. Keep reference to that song.
+        if(songNodeToMove == headNode)
+        {
+            headNode->SetNext(saveHead);
+
+        }
+        if(songNodeToMove == tailNode)
+        {
+            tailNode = songNodePrev;
+            tailNode-> SetNext(NULL);
+        }
+
 
         // If songPosition is 1, list head is removed
         // ...
@@ -268,15 +293,15 @@ void ChangeSongPosition(PlaylistNode*& headNode, PlaylistNode*& tailNode, Playli
 
         // Insert songNode at head or if user position is before head
         // ....
-        if ( newPosition <= 1)
-        {
+       // if ( newPosition <= 1)
+       // {
             // ...
 
-            cout << "\"" << songNode->GetSongName() << "\" moved to position 1" << endl << endl;
+         //   cout << "\"" << songNode->GetSongName() << "\" moved to position 1" << endl << endl;
 
-        }
-        else
-        {
+       // }
+       // else
+       // {
             // insertPosNode refers to the node before the location songNode is inserted
             // ...
 
@@ -284,11 +309,11 @@ void ChangeSongPosition(PlaylistNode*& headNode, PlaylistNode*& tailNode, Playli
             // ...
 
 
-            cout << "\"" << songNode->GetSongName() << "\" moved to position " << newPosition << endl << endl;
-        }
-    }
-    return;
-    }
+            cout << "\"" << songNodeToMove->GetSongName() << "\" moved to position " << newPosition << endl << endl;
+}
+
+    
+    
 
 void OutputSongsBySpecificArtist(PlaylistNode*& headNode, PlaylistNode*& tailNode,
         PlaylistNode*& prevNode)
